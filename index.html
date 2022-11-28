@@ -57,15 +57,15 @@
 </body>
 
 <script>
-    console.log(`iFrame Page URL: ${window.location.href}`)
-    const queryString = window.location.search; 
-    const URLParams = new URLSearchParams(queryString); 
-    const rsCode = URLParams.get('rsCode')
-    const referredByCodeField = document.getElementById('referred_by_code')
-    localStorage.setItem('rsCode', rsCode)
-    
-    referredByCodeField.value = localStorage.getItem(rsCode)
-    console.log()
+    function getRSCode(){
+        const queryString = window.location.search; 
+        const URLParams = new URLSearchParams(queryString); 
+        const rsCode = URLParams.get('rsCode');
+        const referredByCodeField = document.getElementById('referred_by_code');
+        referredByCodeField.value = rsCode;       
+    }
+    getRSCode();
+
 </script>
 
 
