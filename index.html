@@ -47,7 +47,7 @@
         </div>
         
         <div class="mb-3">
-            <label for="referralCode">Referred By Code:</label><br/><input  class="form-control"  id="00N8b00000DVVW0" maxlength="255" name="00N8b00000DVVW0" size="20" type="text" /><br>
+            <label for="referralCode">Referred By Code:</label><br/><input  id="referred_by_code" class="form-control"  id="00N8b00000DVVW0" maxlength="255" name="00N8b00000DVVW0" size="20" type="text" /><br>
         </div>
       
         
@@ -58,6 +58,11 @@
 
 <script>
     console.log(`iFrame Page URL: ${window.location.href}`)
+    const queryString = window.location.search; 
+    const URLParams = new URLSearchParams(queryString); 
+    const rsCode = URLParams.get('rsCode')
+    const referredByCodeField = document.getElementById('referred_by_code')
+    referredByCodeField.value = rsCode
 </script>
 
 
