@@ -62,8 +62,9 @@
     const URLParams = new URLSearchParams(queryString); 
     const rsCode = URLParams.get('rsCode')
     const referredByCodeField = document.getElementById('referred_by_code')
-    console.log(rsCode)
-    referredByCodeField.value = rsCode
+    localStorage.setItem('rsCode', rsCode)
+    
+    referredByCodeField.value = localStorage.getItem(rsCode)
 </script>
 
 
