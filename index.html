@@ -70,6 +70,9 @@ window.onload = () => {
         console.log(`referredByCodeField: ${referredByCodeField}`)
         referredByCodeField.value = rsCode;     
         console.log(rsCode)
+        localStorage.setItem('rsCode', rsCode)
+        const code = localStorage.getItem('rsCode')
+        console.log(`local Storage: ${code}`)
     }
 </script>
 
