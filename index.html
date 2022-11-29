@@ -55,7 +55,10 @@
 </body>
 
 <script>
+window.onload = () => { 
+    getRSCode();
 
+}
     function getRSCode(){
         const queryString = window.location.search; 
         console.log(`queryString: ${queryString}`)
@@ -68,8 +71,6 @@
         referredByCodeField.value = rsCode;     
         console.log(rsCode)
     }
-    getRSCode();
-
 </script>
 
 
