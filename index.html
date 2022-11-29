@@ -69,10 +69,14 @@ window.onload = () => {
         let referredByCodeField = document.getElementById('referred_by_code');
         console.log(`referredByCodeField: ${referredByCodeField}`)   
         console.log(rsCode)
-        let code = rsCode = null ? localStorage.getItem('rsCode') : localStorage.setItem('rsCode', rsCode)
-        console.log(localStorage.getItem('rsCode'))
-        console.log(`code: ${code}`)
-        referredByCodeField.value = code;  
+        console.log(rsCode)
+        if(rsCode = null){
+            return rsCode = localStorage.getItem('rsCode') 
+        } else {
+            return rsCode = localStorage.setItem('rsCode', rsCode)
+        }
+        console.log(rsCode)
+        referredByCodeField.value = rsCode;  
       
     }
 </script>
