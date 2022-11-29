@@ -68,12 +68,11 @@ window.onload = () => {
         console.log(`rsCode: ${rsCode}`)
         const referredByCodeField = document.getElementById('referred_by_code');
         console.log(`referredByCodeField: ${referredByCodeField}`)
-        referredByCodeField.value = rsCode;     
         console.log(rsCode)
-        const code = localStorage.getItem('rsCode') ? localStorage.getItem('rsCode') : localStorage.setItem('rsCode', rsCode)
-        rsCode != null ? document.cookie = `code=${rsCode};` : null
-        console.log(`local Storage: ${code}`)
-        console.log(`cookie: ${document.cookie}`)
+        const code = rsCode = null ? localStorage.getItem('rsCode') : localStorage.setItem('rsCode', rsCode)
+        console.log(`code: ${code}`)
+        referredByCodeField.value = code;   
+      
     }
 </script>
 
