@@ -80,7 +80,7 @@ window.onload = () => {
             rsCode = localStorage.setItem('rsCode', rsCode)
             console.log(`rsCode: ${rsCode}`) 
             console.log(referredByCodeField.value)
-            return referredByCodeField.value = rsCode;
+            return document.getElementById('referred_by_code').value = rsCode;
             
         }
        
