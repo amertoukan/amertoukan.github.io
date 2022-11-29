@@ -64,24 +64,20 @@ window.onload = () => {
         console.log(`queryString: ${queryString}`)
         let URLParams = new URLSearchParams(queryString); 
         console.log(`URLParams: ${URLParams}`)
-        let rsCode = URLParams.get('rsCode');
-        console.log(`rsCode: ${rsCode}`)
+        let rsCode__param = URLParams.get('rsCode');
+       // console.log(`rsCode: ${rsCode}`)
         let referredByCodeField = document.getElementById('referred_by_code');
         console.log(`referredByCodeField: ${referredByCodeField}`)   
-        console.log(rsCode)
-        console.log(rsCode)
-        if(rsCode = null){
+        //console.log(rsCode)
+        //console.log(rsCode)
+        if(rsCode__param == null){
             rsCode = localStorage.getItem('rsCode') 
-            console.log(`rsCode: ${rsCode}`) 
-            console.log(referredByCodeField.value)
             referredByCodeField.value = rsCode;
             
         } else {
-            rsCode = localStorage.setItem('rsCode', rsCode)
-            console.log(`rsCode: ${rsCode}`) 
-            console.log(referredByCodeField.value)
+            window.localStorage.setItem('rsCode', rsCode__param)
+            let rsCode = localStorage.getItem('rsCode')
             document.getElementById('referred_by_code').value = rsCode;
-            
         }
        
     }
