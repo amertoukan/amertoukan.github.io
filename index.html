@@ -60,16 +60,15 @@ window.onload = () => {
 
 }
     function getRSCode(){
-        const queryString = window.location.search; 
+        let queryString = window.location.search; 
         console.log(`queryString: ${queryString}`)
-        const URLParams = new URLSearchParams(queryString); 
+        let URLParams = new URLSearchParams(queryString); 
         console.log(`URLParams: ${URLParams}`)
-        const rsCode = URLParams.get('rsCode');
+        let rsCode = URLParams.get('rsCode');
         console.log(`rsCode: ${rsCode}`)
         const referredByCodeField = document.getElementById('referred_by_code');
         console.log(`referredByCodeField: ${referredByCodeField}`)
         console.log(rsCode)
-        const code = rsCode = null ? localStorage.getItem('rsCode') : localStorage.setItem('rsCode', rsCode)
         console.log(`code: ${code}`)
         referredByCodeField.value = code;   
       
