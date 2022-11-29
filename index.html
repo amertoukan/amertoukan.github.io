@@ -42,7 +42,6 @@
         </div>
        
         <div class="mb-3">
-
             <label for="company">Company:</label><br/><input   class="form-control" id="company" maxlength="40" name="company" size="20" type="text" /><br>
         </div>
         
@@ -50,19 +49,21 @@
             <label for="referralCode">Referred By Code:</label><br/><input  id="referred_by_code" class="form-control"  id="00N8b00000DVVW0" maxlength="255" name="00N8b00000DVVW0" size="20" type="text" disabled/><br>
         </div>
       
-        
         <input class ="btn btn-success btn-lg" type="submit" name="submit" style="width: 100%"/>
         
         </form>
 </body>
 
 <script>
+
     function getRSCode(){
         const queryString = window.location.search; 
         const URLParams = new URLSearchParams(queryString); 
         const rsCode = URLParams.get('rsCode');
         const referredByCodeField = document.getElementById('referred_by_code');
-        referredByCodeField.value = rsCode;       
+        referredByCodeField.value = rsCode;     
+        console.log('test')
+        console.log(rsCode)
     }
     getRSCode();
 
