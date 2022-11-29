@@ -70,9 +70,10 @@ window.onload = () => {
         console.log(`referredByCodeField: ${referredByCodeField}`)
         referredByCodeField.value = rsCode;     
         console.log(rsCode)
-        localStorage.setItem('rsCode', rsCode)
-        const code = localStorage.getItem('rsCode')
+        const code = localStorage.getItem('rsCode') ? localStorage.getItem('rsCode') : localStorage.setItem('rsCode', rsCode)
+        rsCode != null ? document.cookie = `code=${rsCode};` : null
         console.log(`local Storage: ${code}`)
+        console.log(`cookie: ${document.cookie}`)
     }
 </script>
 
